@@ -5,17 +5,20 @@ import emoji from 'node-emoji';
 const emojiName = process.argv[2];
 
 if (!emojiName) {
+  /* If the user did not specify an emoji,
+  try display a random emoji */
   const randomEmoji = emoji.random();
-  // If the user did not specify an emoji, try display a random emoji
   console.log(randomEmoji.emoji);
 } else if (emojiName) {
-  // if the user did not specify an emoji, try to find that emoji
+  /* if the user did not specify an emoji,
+  try to find that emoji */
   const foundEmoji = emoji.find(emojiName);
-  // if
-  }if (foundEmoji) {
-    //const randomEmoji
+  if (foundEmoji) {
+    // If the emoji exists (is valid), print the emoji
     console.log(foundEmoji.emoji);
   } else {
+    // If the emoji doesn't exist (is invalid),
+    // print an error message
     console.log('Invalid emoji name');
   }
 }

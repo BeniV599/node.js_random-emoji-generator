@@ -1,11 +1,31 @@
-# Node.js Random Emoji Generator
+# Node.js Random Emoji
 
-Generate random emojis on command line
+Generate random emojis on the command line
 
 ## Random Emoji
 
+````bash
+$ node index.js
+❤️
+## Emoji by name
 ```bash
-TODO: add an output for the program
 ```
 
-## Emoji by name
+$ node index.js strawberry
+🍓
+$ node index.js smile
+😄
+```
+
+Invalid emoji names will print an error
+```bash
+$ node index.js strawberryyy
+Invalid emoji name
+```
+Incorrect emoji names will print an error
+
+Without any user input of a correct emoji name: print emoji
+```bash
+TODO: add output to the program
+```
+````
